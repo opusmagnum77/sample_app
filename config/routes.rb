@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
 
-  get 'users/new'
+  get 'users/new' # how is this different from the the get 'urlname' => 'controller_name#action'
 
 root             'static_pages#home'
 get 'help'    => 'static_pages#help'
