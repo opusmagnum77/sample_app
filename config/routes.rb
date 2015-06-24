@@ -8,6 +8,8 @@ get 'help'    => 'static_pages#help'
 get 'about'   => 'static_pages#about'
 get 'contact' => 'static_pages#contact'
 get 'signup'  => 'users#new'
+
+resources :users # this makes users model a partially RESTful resource
   # get 'static_pages/help'
 
   # get 'static_pages/about'
