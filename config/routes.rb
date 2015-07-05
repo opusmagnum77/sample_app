@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
 
 
+  get 'sessions/new'
+
+
+
   get 'users/new' # how is this different from the the get 'urlname' => 'controller_name#action'
 
 root             'static_pages#home'
@@ -8,8 +12,11 @@ get 'help'    => 'static_pages#help'
 get 'about'   => 'static_pages#about'
 get 'contact' => 'static_pages#contact'
 get 'signup'  => 'users#new'
+get 'login'   => 'sessions#new'
+post 'login'   => 'sessions#create'
+get 'logout'   => 'sessions#destroy'
 
-resources :users # this makes users model a partially RESTful resource
+resources :users # this makes users model a partially RESTful resource, also creates users/new user/id (show)
   # get 'static_pages/help'
 
   # get 'static_pages/about'
